@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto my-12">
     <h1>About Page</h1>
     Result : {{ result }} <br />
     <ClientOnly> Date : {{ dateNow }} </ClientOnly>
