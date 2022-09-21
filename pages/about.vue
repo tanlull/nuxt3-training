@@ -6,6 +6,10 @@
     <br />
     {{ useB() }} {{ c }} {{ useCalendar() }}
     <BackButton />
+    <p>{{ config.apiKey }}</p>
+    <p>{{ config.jwtSecret }}</p>
+    <p>{{ config.mysqlPassword }}</p>
+    <p>{{ config.public.backendUrl }}</p>
   </div>
 </template>
 
@@ -13,4 +17,5 @@
 const result = useAdd(2, 3);
 const dateNow = useShowDate();
 const c = useCalendar();
+const config = useRuntimeConfig();
 </script>

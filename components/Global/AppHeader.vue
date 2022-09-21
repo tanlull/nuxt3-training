@@ -28,6 +28,9 @@
             <li><a>Add Customer</a></li>
           </ul>
         </li>
+        <li><NuxtLink to="/product">Product</NuxtLink></li>
+        <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+        <li><NuxtLink to="/contactError">Contact Error Handle</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>
       </ul>
     </div>
