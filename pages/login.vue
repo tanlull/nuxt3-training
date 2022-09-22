@@ -49,21 +49,27 @@
 //const { x, y } = useMouse();
 
 import Swal from "sweetalert2";
+import { useStorage } from "@vueuse/core";
 
 const login = async (loginForm) => {
   //console.log(loginForm);
   const { data, error } = await useLogin(loginForm.email, loginForm.password);
   if (error.value) {
-    console.log(error.value);
+    console.log(error.value.response);
     Swal.fire({
       icon: "error",
       title: error.value.data?.message,
     });
   }
-  console.log(data.value.access_token);
-  Swal.fire({
-    icon: "success",
-    title: data.value.access_token,
-  });
+  if (data.value) {
+    //save token from server to local storage
+    console.log(data.value); // {     "access_token": "eyJ..",    "token_type": "bearer",    "expires_in": 7200 }
+    const state = useStorage("token", data.value);
+  }
+  const { data: responseProfile } = await useGetProfile();
+  if (responseProfile.value) {
+    console.log(responseProfile.value);
+    navigateTo("/member");
+  }
 };
 </script>

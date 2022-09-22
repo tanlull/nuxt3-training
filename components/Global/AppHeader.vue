@@ -6,7 +6,7 @@
       /></NuxtLink>
     </div>
     <div class="flex-none">
-      <ul class="menu menu-horizontal p-0">
+      <ul class="p-0 menu menu-horizontal">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li tabindex="0">
           <a>
@@ -34,6 +34,7 @@
         <li><NuxtLink to="/contactError">Contact Error Handle</NuxtLink></li>
         <li><NuxtLink to="/vueuse">VueUse</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>
+        <li><NuxtLink to="/member">Member</NuxtLink></li>
       </ul>
     </div>
   </div>
