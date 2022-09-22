@@ -25,6 +25,7 @@ definePageMeta({
           id nisi.
         </p>
         <button class="btn btn-primary">Get Started</button>
+        <ApiVersion />
       </div>
     </div>
   </div>

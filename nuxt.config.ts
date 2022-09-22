@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@formkit/nuxt", "@vueuse/nuxt"],
   app: {
     baseURL: "/", // domain.com/mysystem => "/mysystem"
     head: {
@@ -8,6 +8,10 @@ export default defineNuxtConfig({
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/@formkit/themes@next/dist/genesis/theme.css",
         },
       ],
       scripts: [],
@@ -19,6 +23,7 @@ export default defineNuxtConfig({
     // Load a Node.js module directly (here it's a Sass file).
     // 'bulma',
     // CSS file in the project
+    "sweetalert2/dist/sweetalert2.css",
     "@/assets/css/global-css.css",
     // SCSS file in the project
     // '@/assets/css/main.scss'
