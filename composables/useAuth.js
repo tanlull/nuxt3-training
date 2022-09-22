@@ -29,3 +29,11 @@ export async function useGetProfile() {
     });
     return { data , error };
 }
+
+export function useLogout(){
+    const token =useStorage("token",null);
+    token.value=null;
+    const profile = useState("globalProfile");
+    profile.value=null;
+    navigateTo("/",{replace:true});
+}

@@ -63,12 +63,12 @@ const login = async (loginForm) => {
   }
   if (data.value) {
     //save token from server to local storage
-    console.log(data.value); // {     "access_token": "eyJ..",    "token_type": "bearer",    "expires_in": 7200 }
+    // console.log(data.value); // {     "access_token": "eyJ..",    "token_type": "bearer",    "expires_in": 7200 }
     const state = useStorage("token", data.value);
-  }
-  const { data: responseProfile } = await useGetProfile();
-  if (responseProfile.value) {
-    console.log(responseProfile.value);
+    const { data: responseProfile } = await useGetProfile();
+
+    useState("globalProfile", () => responseProfile);
+
     navigateTo("/member");
   }
 };
