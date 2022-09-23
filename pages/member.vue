@@ -19,6 +19,7 @@
           </p>
 
           <button class="btn btn-warning" @click="useLogout">Logout</button>
+          <NuxtLink class="btn btn-warning" to="/user">ข้อมูลผู้ใช้</NuxtLink>
         </div>
       </div>
     </div>

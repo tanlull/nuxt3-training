@@ -1,9 +1,9 @@
 <template>
   <div class="navbar nt-navbar">
     <div class="flex-1">
-      <NuxtLink to="/"
-        ><img src="logo.png" helght="100" width="200"
-      /></NuxtLink>
+      <NuxtLink to="/">
+        <img src="/assets/logo.png" helght="100" width="200" />
+      </NuxtLink>
     </div>
     <div class="flex-none">
       <ul class="p-0 menu menu-horizontal">

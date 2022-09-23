@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "@formkit/nuxt": "^1.0.0-beta.11-ed5db9e",
-    "sweetalert2": "^11.4.33"
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.23.1",
+    "sweetalert2": "^11.4.33",
+    "vue-awesome-paginate": "^1.0.4"
   }
 }
